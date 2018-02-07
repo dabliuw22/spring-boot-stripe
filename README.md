@@ -5,7 +5,7 @@ En este proyecto se integra la pasarela de pagos de Stripe con Spring Boot, usan
 
 1. Crear una cuenta en [Stripe](URL "https://dashboard.stripe.com/register").
 
-2. Iniciar sesión y dirigirnos a la [dashboard](URl "https://dashboard.stripe.com/test/dashboard"), en ella damos click a [API](URL "https://dashboard.stripe.com/account/apikeys"), donde podremos observar dos seciones, test y restricted API keys, la primera contendra las keys de prueba para testiar en un entorno de desarrollo y la segunda para puesta en producción.
+2. Iniciar sesión y dirigirnos a la [dashboard](URl "https://dashboard.stripe.com/test/dashboard"), en ella damos click a [API](URL "https://dashboard.stripe.com/account/apikeys"), donde podremos observar dos secciones, test y restricted API keys, la primera contendra las keys de prueba para realizar test en un entorno de desarrollo y la segunda para puesta en producción.
 
 3. Copiar las keys en el achivo *application.properties*:
 ```
