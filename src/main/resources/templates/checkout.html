@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8"/>
+	<title>Spring Boot - Stripe</title>
+</head>
+<body>
+	<form th:action="@{/checkout}" method="POST">
+		<input type="hidden" name="amount" th:value="${checkout.orden.total}"/>
+		<script
+			src="https://checkout.stripe.com/checkout.js" 
+			class="stripe-button"
+			th:attr='data-key=${stripePublicKey},
+					data-amount=${checkout.orden.total}, data-currency=${currency}'
+			data-name="Spring Boot - Stripe"
+			data-description="Widget"
+			data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
+			data-locale="auto">
+		</script>
+	</form>
+	<footer>
+		<script src="https://js.stripe.com/v3/"></script>
+	</footer>
+</body>
+</html>
